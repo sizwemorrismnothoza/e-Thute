@@ -1,0 +1,349 @@
+
+
+<div class="container site-wrapper" >
+    <div class="card-body">
+        <div class="Welcome-headings">
+            <div class="avatar">
+                <img src="assets/images/person-male1.png" class="avatar-img shadow">
+            </div>
+            <h3 class="site-subtitle reg-title">Learner Registration</h3>
+        </div>
+        <form #register="ngForm" (ngSubmit)="submitForm(register.value)">
+            <div class="personal">
+                <h4 class="description-text">Personal Details</h4>
+                    <div class="form-group">
+                        <input 
+                            type="text"
+                            class="form-control" 
+                            name ="name" 
+                            placeholder="Full name"
+                            #learnerName = "ngModel" 
+                            [ngClass] = "{'is-invalid':learnerName.errors && learnerName.touched}"
+                            ngModel
+                            minlength="2"
+                            required
+                            >
+        
+                            <div [hidden] = "!learnerName.errors?.required" class="invalid-feedback">
+                                Full name is required
+                            </div>
+        
+                            <div [hidden] = "!learnerName.errors?.minlength" class="invalid-feedback">
+                                Name should have atleast 2 characters
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input 
+                            type="text"
+                            class="form-control" 
+                            name ="surname" 
+                            placeholder="Surname"
+                            #learnerSurname = "ngModel" 
+                            [ngClass] = "{'is-invalid':learnerSurname.errors && learnerSurname.touched}"
+                            ngModel
+                            minlength="2"
+                            required
+                        >
+    
+                        <div [hidden] = "!learnerSurname.errors?.required" class="invalid-feedback">
+                            Full name is required
+                        </div>
+    
+                        <div [hidden] = "!learnerSurname.errors?.minlength" class="invalid-feedback">
+                            Name should have atleast 2 characters
+                        </div>
+    
+                </div>
+                <div class="form-group">
+                    <input
+                     
+                        class="form-control" 
+                        type="text" 
+                        name ="userName"
+                        placeholder="E-mail address" 
+                        #learnerUserName="ngModel"
+                        [ngClass] = "{'is-invalid':learnerUserName.errors && learnerUserName.touched}"
+                        ngModel
+                        minlength="2"
+                        maxlength="50"
+                        required
+                        >
+    
+                        <div [hidden] = "!learnerUserName.errors?.required" class="invalid-feedback">
+                            E-mail address is required
+                        </div>
+    
+                        <div [hidden] = "!learnerUserName.errors?.minlength" class="invalid-feedback">
+                            E-mail should have atleast 2 characters
+                        </div>
+    
+                        <!-- Email regular exprestion -->
+                </div>
+                <div class="form-group">
+                    <input
+                     
+                        class="form-control" 
+                        type="text" 
+                        name ="cell" 
+                        placeholder="Cell number" 
+                        #learnerCell="ngModel"
+                        [ngClass] = "{'is-invalid':learnerCell.errors && learnerCell.touched}"
+                        ngModel
+                        minlength="10"
+                        maxlength="10"
+                        required
+                        >
+    
+                        <div [hidden] = "!learnerCell.errors?.required" class="invalid-feedback">
+                            Cell number is required
+                        </div>
+    
+                        <div [hidden] ="!learnerCell.errors?.minlength" class="invalid-feedback">
+                            Cell number should have 10 characters
+                        </div>                    
+                </div>
+                <div class="form-group">
+                    <input
+                        class="form-control" 
+                        type="text" 
+                        name ="password" 
+                        placeholder="Password" 
+                        #learnerPassword="ngModel"
+                        [ngClass] = "{'is-invalid':learnerPassword.errors && learnerPassword.touched}"
+                        ngModel
+                        minlength="2"
+                        required
+                        >
+    
+                        <div [hidden] = "!learnerPassword.errors?.required" class="invalid-feedback">
+                            Password is required
+                        </div>
+                        <div [hidden] ="!learnerPassword.errors?.minlength" class="invalid-feedback">
+                            Password should have 2 characters
+                        </div>                    
+                </div>
+                <div class="form-group">
+                    <input 
+                        class="form-control" 
+                        type="text" 
+                        name ="reTypePassword" 
+                        placeholder="Re-type Password" 
+                        #learnerReTypePassword
+                        [ngClass] = "{'is-invalid':learnerReTypePassword.errors && learnerReTypePassword.touched}"
+                        minlength="2"
+                        required
+                        >
+    
+                        <div [hidden] = "!learnerReTypePassword.errors?.required" class="invalid-feedback">
+                            Re-type Password is required
+                        </div>
+                        <div [hidden] ="!learnerReTypePassword.errors?.minlength" class="invalid-feedback">
+                            Re-type Password should have 2 characters
+                        </div>                    
+                </div>
+            </div>
+
+            <h4 class="description-text">Education</h4>
+            <div class="form-group">
+                <input 
+                
+                    class="form-control" 
+                    type="text" 
+                    name ="schoolName" 
+                    placeholder="Name of high school" 
+                    #learnerSchoolName="ngModel"
+                    [ngClass] = "{'is-invalid':learnerSchoolName.errors && learnerSchoolName.touched}"
+                    ngModel
+                    minlength="2"
+                    required
+                    >
+
+                    <div [hidden] = "!learnerSchoolName.errors?.required" class="invalid-feedback">
+                        School name is required
+                    </div>
+                    <div [hidden] ="!learnerSchoolName.errors?.minlength" class="invalid-feedback">
+                        School name should have 2 characters
+                    </div>                    
+            </div>
+
+            <div class="form-group">
+                
+                <select
+                    class="selector textbox-margin" 
+                    name="grade" 
+                    id="grade" 
+                    class="form-control"
+                    #learnerGrade="ngModel"
+                    [ngClass] = "{'is-invalid':learnerGrade.errors && learnerGrade.touched}"
+                    ngModel
+                    required
+                    >
+                    <option value="">Grade</option>
+                    <option *ngFor=" let grade of grades">{{grade}}</option>
+                </select>
+
+                <div [hidden] = "!learnerGrade.errors?.required" class="invalid-feedback">
+                    Please select your grade
+                </div>
+            </div>
+            <h4 class="description-text">Location</h4>
+            <div class="form-group">
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    name ="town" 
+                    placeholder="Town" 
+                    #learnerTown="ngModel"
+                    [ngClass] = "{'is-invalid':learnerTown.errors && learnerTown.touched}"
+                    ngModel
+                    minlength="2"
+                    required
+                    >
+
+                    <div [hidden] = "!learnerTown.errors?.required" class="invalid-feedback">
+                        Town is required
+                    </div>
+                    <div [hidden] ="!learnerTown.errors?.minlength" class="invalid-feedback">
+                        Town should have 2 characters
+                    </div>                    
+            </div>
+
+            <div class="form-group">
+                <select
+                    class="selector textbox-margin"
+                    name="province" 
+                    id="province" 
+                    class="form-control"
+                    #learnerprovince="ngModel"
+                    [ngClass] = "{'is-invalid':learnerprovince.errors && learnerprovince.touched}"
+                    ngModel
+                    required
+                    >
+                    <option value="">Province</option>
+                    <option *ngFor=" let province of provinces">{{province}}</option>
+                </select>
+                <div [hidden] = "!learnerprovince.errors?.required" class="invalid-feedback">
+                    Please select your province
+                </div>
+            </div>
+
+            <div class="conditions">
+                <span class="">You agree to terms and conditions by registering with eThute</span>
+                <span class=""><a href="#">Terms and conditions</a></span>
+            </div> 
+
+            <div class="form-group btn-container" >
+                <input  
+                    class="button register-btn shadow mt-2 btn-block" 
+                    type="submit" 
+                    [disabled] = "learnerprovince.errors?.required" 
+                    value="Register"
+                    >
+            </div>
+          
+        </form>
+    </div>
+</div>
+    
+
+
+<!--<body>
+    <div class="container site-wrapper" >
+        <div class="section-2">
+            <div class="Welcome-headings">
+                <div class="avatar">
+                    <img src="assets/images/person-male1.png" class="avatar-img shadow">
+                </div>
+                <h3 class="site-subtitle reg-title">Learner Registration</h3>
+            </div>
+            <form id="registerForm">
+                <div class="personal">
+                    <h4 class="description-text">Personal Details</h4>
+                    <div class="textbox-wrapper">
+                        <input type="text" id="fullname" name="fullname" class="textbox textbox-margin" placeholder="Full name" >
+                    </div>
+                    <div class="textbox-wrapper">
+                        <input type="text" id="username" name="username" class="textbox textbox-margin" placeholder="User name" >
+                    </div>
+                    <div class="textbox-wrapper">
+                        <input type="email" id="email" name="email" class="textbox textbox-margin" placeholder="E-mail address" >
+                    </div>
+                    <div class="textbox-wrapper">
+                        <input type="text" id="cellnum" name="cellnum" class="textbox textbox-margin" placeholder="Cell number" >
+                    </div>
+                    <div class="textbox-wrapper">
+                        <input type="password" id="password" name="password" class="textbox textbox-margin" placeholder="Password" >
+                    </div>
+                    <div class="textbox-wrapper">
+                        <input type="password" id="passagain" name="passagain" class="textbox textbox-margin" placeholder="Re-type Password" >
+                    </div>
+                    
+                </div>
+                <div class="other-details">
+                    <div class="education">
+                        <h4 class="description-text">Education</h4>
+                        <div class="custom-select">
+                            <select id="school" name="school">
+                                <option value="0">name of High School</option>
+                                <option value="1">Poelano Secondary</option>
+                                <option value="2">Maxeke Secondary</option>
+                                <option value="3">Genera Jan Smuts High</option>
+                                <option value="4">Heilbron High</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select id="grade" name="grade" class="selector textbox-margin">
+                                <option value="0">Grade</option>
+                                <option value="1">Grade 12</option>
+                                <option value="2">Grade 11</option>
+                                <option value="3">Grade 10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h4 class="description-text">Location</h4>
+                        <div class="custom-select">
+                            <select id="town" name="town" class="selector textbox-margin">
+                                <option value="0">Town</option>
+                                <option value="1">Eastern Cape</option>
+                                <option value="2">Free State</option>
+                                <option value="3">Gauteng</option>
+                                <option value="4">KwaZulu Natal</option>
+                                <option value="5">Limpopo</option>
+                                <option value="6">Mpumalanga</option>
+                                <option value="7">North West</option>
+                                <option value="8">Northern Cape</option>
+                                <option value="9">Western Cape</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select id="province" name="province" class="selector textbox-margin">
+                                <option value="0">Province</option>
+                                <option value="1">Eastern Cape</option>
+                                <option value="2">Free State</option>
+                                <option value="3">Gauteng</option>
+                                <option value="4">KwaZulu Natal</option>
+                                <option value="5">Limpopo</option>
+                                <option value="6">Mpumalanga</option>
+                                <option value="7">North West</option>
+                                <option value="8">Northern Cape</option>
+                                <option value="9">Western Cape</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="conditions">
+                    <span class="">You agree to terms and conditions by registering with eThute</span>
+                    <span class=""><a href="#">Terms and conditions</a></span>
+                </div>                            
+                <div class="btn-container">
+                    <button class="button register-btn shadow"><a href="./profile.html">Register</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/custom.js"></script>
+</body>-->
+
+

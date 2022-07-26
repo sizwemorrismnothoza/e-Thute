@@ -1,0 +1,544 @@
+/*______________ browser reset ______________*/
+* {
+    box-sizing: border-box
+}
+
+html {
+    /* background: #b3b3b3; */
+    font-size: 16px;
+}
+
+body {
+    font-size: 0.875em;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Red Hat Display';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Red Hat Display';
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+/*______________ end of browser reset ______________*/
+
+.site-wrapper {
+    max-width: 1366px;
+    background: #edf2f8;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.aligner {
+    /* border: 1px solid green; */
+    margin: 1rem;
+}
+
+/*______________  start of first page ______________*/
+.section-1 {
+    /* background: url("images/welcome-bg.png") center right/cover no-repeat border-box; */
+    /* color: white; */
+/*     padding: 10px;
+    margin: 10px; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.site-title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #444446;
+    margin: 0 2rem;
+    font-weight: 800;
+}
+
+.site-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4c4f56;
+	margin: 0 2rem;
+}
+
+.Welcome-headings {
+    margin-bottom: 2.5rem;
+}
+
+.description-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4c4f56;
+	margin: 0 2rem;
+}
+
+.desc-texts {
+    margin-bottom: 65px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.button {
+    background-color: #edf2f8;
+    border: none;
+    border-radius: 1.75rem;
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0.25rem;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.sqr-btn {
+    background-color: #edf2f8;
+    border: none;
+    border-radius: 0.75rem;
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0.25rem;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.shadow {
+    /* box-shadow: 0 0 2rem 0.5rem rgba(255, 255, 255), 0.5rem 0.5rem 1rem 0 rgb(13, 39, 80, 0.16); */
+    box-shadow: 0.5rem 0.5rem 1.25rem 0 rgb(13, 39, 80, 0.16), -0.5rem -0.5rem 1.25rem 0 rgb(255, 255, 255);
+}
+
+.learner-btn {
+    color: #e28537;
+    margin-right: 1.5rem;
+}
+
+.teacher-btn {
+    color: #5489b5;
+}
+
+/*______________  end of first page ______________*/
+
+/*______________  start of second page ______________*/
+.section-2 {
+    /* background: url("images/welcome-bg.png") center right/cover no-repeat border-box; */
+    /* color: white; */
+/*     padding: 10px;
+    margin: 10px; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    /* margin: 2rem 0; */
+}
+
+.avatar {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.avatar-img {
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+.reg-title {
+    color: #e28537;
+    font-weight: bold;
+}
+
+#registerForm {
+    /* border: 1px solid brown; */
+    max-width: 80%;
+}
+
+.personal {
+    /* border: 1px solid black; */
+    min-width: 100%;
+}
+
+.form-title {
+    font-weight: bold;
+}
+
+.description-text {
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+.textbox-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.textbox {
+    min-width: 100%;
+    border-radius: 1rem;
+    padding: 0.75rem 1.25rem;
+    color: #acacac;
+    background-color: #edf2f8;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0 rgb(13, 39, 80, 0.16) inset, -0.25rem -0.25rem 1rem 0 rgb(255, 255, 255) inset;
+    /* box-shadow: 0 0 2.5rem 0 rgba(255, 255, 255) inset, 0.5rem 0.5rem 1rem 0 rgb(13, 39, 80, 0.16) inset; */
+    border: none;
+}
+
+.textbox-margin {
+    margin: 0.25rem 0;
+}
+
+/*______________  start of select ______________*/
+.custom-select {
+    position: relative;
+    margin: 1rem 0;
+    /* font-family: Arial; */
+}
+
+.custom-select select {
+    display: none;
+    margin-top: 25px;
+}
+
+.select-selected {
+    background-color: #edf2f8;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.25rem 0 rgb(13, 39, 80, 0.16), -0.5rem -0.5rem 1.25rem 0 rgb(255, 255, 255);
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #e28537 transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: #acacac;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #edf2f8;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/*______________  end of select ______________*/
+
+.education {
+    margin-top: 25px;
+}
+
+.location {
+    margin-top: 25px;
+}
+
+.conditions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    margin: 2.5rem 0;
+}
+
+.conditions span {
+    text-align: center;
+}
+
+.conditions a {
+    text-decoration: none;
+    color: #e28537;
+}
+
+.btn-container {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1.5rem; */
+}
+
+.register-btn {
+    min-width: 100%;
+    color: #ffffff;
+    background: linear-gradient(to right, rgb(249, 169, 110, 0.5), #e67b2b);
+    /* padding: 1rem 5rem; */
+}
+/*______________  end of second page ______________*/
+
+/*______________ start of third page ______________*/
+
+.close-button {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.close-button button {
+    font-size: 2rem;
+    color: grey;
+}
+
+.close-button-icon {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.profile-card {
+    max-width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: 2.25rem;
+    border-radius: 0.75rem;
+}
+
+/* .card-avatar {
+} */
+
+.card-avatar-img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    border: 0.25rem solid #e28537;
+}
+
+.card-name {
+    color: #e28537;
+}
+
+.card-school {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-container {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.options {
+    margin-left: 1rem;
+}
+
+.text-orange {
+    color: #e28537;
+}
+
+/*______________ end of third page _________________*/
+
+/*______________ start of fourth page _______________*/
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;  
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.logo img {
+    width: 3.5rem;
+}
+
+.header div button{
+    color: grey;
+}
+
+.subjects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.subject {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    border: 1px solid red;
+}
+
+.fav-button {
+    color: red;
+}
+
+.rnd-btn {
+    border-radius: 100%;
+    color: red;
+    padding: 0.25rem;
+    font-size: 0.5rem;
+}
+
+.sub-text {
+    font-size: 0.5rem;
+    font-weight: 700;
+}
+
+/*______________ end of fourth page _______________*/
+/*______________  start of media query ______________*/
+@media (min-width: 40rem) {
+    .site-title {
+        font-size: 2.75rem;
+        font-weight: 900;
+    }
+
+    .site-subtitle {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+
+    .description-text {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .action-buttons a {
+        text-decoration: none;
+        background-color: #ffffff;
+        padding: 1rem 1.5rem;
+        border-radius: 2.5rem;
+    }
+
+    .learner-btn a {
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+    
+    .teacher-btn a {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 60rem) {
+    .site-title {
+        font-size: 2.75rem;
+        font-weight: 900;
+    }
+
+    .site-subtitle {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+
+    .description-text {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .action-buttons a {
+        text-decoration: none;
+        background-color: #ffffff;
+        padding: 1rem 1.5rem;
+        border-radius: 2.5rem;
+    }
+
+    .learner-btn a {
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+    
+    .teacher-btn a {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+}
+
+/*______________  end of media query ______________*/
